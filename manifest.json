@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "CW: Title changes",
+  "description": "Renames CW html title to CW ticket num and summary",
+  "version": "1.0",
+  "icons" : {
+    "16" : "assets/icon.png",
+    "48" : "assets/icon.png",
+    "128" : "assets/icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://aus.myconnectwise.net/*"],
+      "js": ["background.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}

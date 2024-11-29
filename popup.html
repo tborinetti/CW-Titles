@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      padding: 0;
+      width: 200px;
+    }
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h3>Choose to display:</h3>
+  
+  <label>
+    <input type="radio" name="display_option" value="company">Company name
+  </label>
+  <label>
+    <input type="radio" name="display_option" value="summary">Ticket Summary
+  </label>
+  <label>
+    <input type="radio" name="display_option" value="initals_summary">Company Initals + Summary
+  </label>
+
+  <label>
+    <input type="checkbox" id="change_icon"> Change CW icon to smiley
+  </label>
+
+  <button id="save_button">Save</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
