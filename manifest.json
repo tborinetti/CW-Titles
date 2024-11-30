@@ -10,7 +10,8 @@
   },
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "content_scripts": [
     {
@@ -20,6 +21,5 @@
   ],
   "action": {
     "default_popup": "popup.html"
-  },
-  "options_page": "options.html"
+  }
 }

@@ -6,7 +6,7 @@ chrome.storage.sync.get(['display_option', 'icon_preference'], (data) => {
   if (data.display_option) {
     document.querySelector(`input[name="display_option"][value="${data.display_option}"]`).checked = true;
   }
-  checkbox.checked = data.icon_change || false;
+  checkbox.checked = data.icon_preference || false;
 });
 
 
@@ -16,6 +16,9 @@ save_button.addEventListener('click', () => {
   const icon_change = checkbox.checked;
 
   chrome.storage.sync.set({ display_option: selected_display_option, icon_preference: icon_change }, () => {
-    alert('Settings saved!');
+    location.reload();
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+      chrome.tabs.reload(tabs[0].id);
+    });
   });
 });
