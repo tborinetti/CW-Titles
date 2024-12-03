@@ -2,13 +2,13 @@
 CW Titles is a browser extension allows users to dynamically update ConnectWise Manage browser tab titles and favicon based on the content of the page and user preferences. The extension provides a simple interface to set these preferences and applies them in real-time.
 
 ### Features
-At the moment, a refresh is needed when opening a new ticket within ConnectWise - aiming to fix this soon. Also planning on implementing session history functionality to prevent Kaseya and DUO from requiring MFA/SSO each time a new tab is opened.
 - **Dynamic Tab Title:** Update the tab title based on selected options:
   - **Summary:** Displays a summary from the page content
   - **Company:** Displays the company name from the page content
   - **Initials and Summary:** Combines the company's initials with the summary
 - **Custom Favicon:** Option to change the favicon to a smiley face
 
+At the moment, a refresh is needed when opening a new ticket within ConnectWise - aiming to fix this soon. Also planning on implementing session history functionality to prevent Kaseya and DUO from requiring MFA/SSO each time a new tab is opened.
 ### Installation
 1. **Download the Code:**
     - Download the ZIP file from GitHub
