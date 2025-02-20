@@ -8,6 +8,7 @@ CW Titles is a browser extension allows users to dynamically update ConnectWise 
   - **Initials and Summary:** Combines the company's initials with the summary
 - **Custom Favicon:** Option to change the favicon to a smiley face
 
+At the moment, a refresh is needed when opening a new ticket within ConnectWise - aiming to fix this soon. Also planning on implementing session history functionality to prevent Kaseya and DUO from requiring MFA/SSO each time a new tab is opened.
 ### Installation
 1. **Download the Code:**
     - Download the ZIP file from GitHub
