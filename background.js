@@ -7,11 +7,11 @@ chrome.storage.sync.get(['display_option', 'icon_preference'], function(data) {
     change_icon_preference = data.icon_preference;
 });
 
-function changeFavicon(letter) {
+function changeFavicon(icon) {
     const faviconLink = document.querySelector("link[rel*='icon']") || document.createElement('link');
 
     faviconLink.rel = 'icon';
-    faviconLink.href = chrome.runtime.getURL(`assets/${letter}.ico`);
+    faviconLink.href = chrome.runtime.getURL(`assets/${icon}.ico`);
     
     document.head.appendChild(faviconLink);
 }
@@ -46,6 +46,7 @@ function parentMutationCallback(mutationsList, parentObserver) {
     for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
             // Check if the target element is now present in the DOM
+            changeFavicon("icon");
             attachObserverToDetailLabel();
             attachObserverToPodHeader();
         }
